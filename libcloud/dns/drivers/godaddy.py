@@ -273,7 +273,7 @@ class GoDaddyDNSDriver(DNSDriver):
         :rtype:  :class:`Zone`
         """
         result = self.connection.request(
-            '/v1/domains/%s/' % zone_id).object
+            '/v1/domains/%s' % zone_id).object
         zone = self._to_zone(result)
         return zone
 
